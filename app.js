@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 var nunjucks = require("nunjucks")
+const routes = require('./routes');
+app.use('/', routes);
+var fs=require("fs");
 
 // en algunos archivo que este en el directorio raíz de nuestra aplicación... por ejemplo app.js
 var locals = {
@@ -31,20 +34,22 @@ app.use('/is-anybody-in-there', function (req, res, next) {
     next();
 })
 
-app.get('/', function (req, res) {
-    console.log(locals.people)
-  res.render('index',{title: "Hall of Fame", people: locals.people });
-});
+
+
+//app.get('/', function (req, res) {
+//     console.log(locals.people)
+//   res.render('index',{title: "Hall of Fame", people: locals.people });
+// });
 
 
 
-app.get('/is-anybody-in-there', function (req, res) {
-    res.send('GET request to is anybody');
-  });
+// app.get('/is-anybody-in-there', function (req, res) {
+//     res.send('GET request to is anybody');
+//   });
 
-  app.post('/modernism', function (req, res) {
-    res.send('POST request to homepage');
-  });
+//   app.post('/modernism', function (req, res) {
+//     res.send('POST request to homepage');
+//   });
 
 
 
