@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Lazoju001/tw#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nunjucks": "^3.1.2"
   }
 }
