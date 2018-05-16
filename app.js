@@ -4,6 +4,7 @@ var nunjucks = require("nunjucks")
 const routes = require('./routes');
 app.use('/', routes);
 var fs=require("fs");
+const serve   = require('express-static');
 
 // en algunos archivo que este en el directorio raíz de nuestra aplicación... por ejemplo app.js
 var locals = {
@@ -34,7 +35,7 @@ app.use('/is-anybody-in-there', function (req, res, next) {
     next();
 })
 
-
+app.use(serve(__dirname + '/public'));
 
 //app.get('/', function (req, res) {
 //     console.log(locals.people)

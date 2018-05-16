@@ -58,3 +58,13 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+#content {
+  color: rgb(0, 174, 255);
+}
+
+#name {
+  color: rgb(0, 153, 255);
+  font-weight: bold;
+    
+}
